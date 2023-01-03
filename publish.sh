@@ -3,9 +3,9 @@ NEW_VERSION=$1
 REGISTRY="tkregistry"
 
 if [ $NEW_VERSION ];then
-  vpl publish --registry=${HOME}/.vpl/registries/${REGISTRY} --update-version=$NEW_VERSION
+  vpl publish --reg=${HOME}/.vpl/registries/${REGISTRY} --update-version=$NEW_VERSION
 else
-  vpl publish --registry=${HOME}/.vpl/registries/${REGISTRY} 
+  vpl publish --reg=${HOME}/.vpl/registries/${REGISTRY} 
 fi
 
 NAME=`vpl scan name`
