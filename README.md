@@ -1,6 +1,9 @@
-# vcport-template
+# tkutils
 
-# 模版参数
-PT PORT_NAME = 传入参数
+## Author
 
-PT USER_NAME = `git config --global --get user.name`
+ZhengXianda
+
+## License
+
+tkutils is available under the MIT license. See the LICENSE file for more info.
