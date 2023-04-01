@@ -6,17 +6,19 @@ using namespace tkht;
 
 int main() 
 {
-  TKList<int> list;
+  TKArray<int> array, ret;
 
   for (int i = 0; i < 10; i++)
   {
-    list <<= i;
+    array ^= i;
   }
 
-  for (int v : list)
-  {
-    cout << v << ", " << endl;
-  }
+  ret = array - array[0];
+
+  for (int v : array) cout << v << ", ";
+  cout << endl;
+  for (int v : ret) cout << v << ", ";
+  cout << endl;
 
   return 1;
 }
