@@ -36,9 +36,9 @@
 #  vcpkg_from_bitbucket
 #  vcpkg_from_sourceforge
 vcpkg_download_distfile(ARCHIVE
-    URLS "https://github.com/TKCPlusProjects/tkutils/releases/download/0.1.2/tkutils-0.1.2.zip"
-    FILENAME "tkutils-0.1.2.zip"
-    SHA512 f3cf5917125dbd293bd68c7df2d74709df1d87af0a7ddd680486306d74cb7dfb87e486b2508ff625220b389ddfe5d20a1a9cdcce1c99d87692b73943ec0ae8d1
+    URLS "https://github.com/TKCPlusProjects/tkutils/releases/download/0.1.3/tkutils-0.1.3.zip"
+    FILENAME "tkutils-0.1.3.zip"
+    SHA512 5e7ddb6edab595290de013f832b70d61a5513e905b0a1ba88e3949d7dce36f3de40e3a61c8559b5fe092e860ac85360c875013d0db336125bcfc64a7d033e43f
 )
 
 vcpkg_extract_source_archive_ex(

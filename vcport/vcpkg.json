@@ -1,6 +1,6 @@
 {
   "name": "tkutils",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "The tkutils is a port of vcpkg",
   "homepage": "https://github.com/ZhengXianda/tkutils",
   "dependencies": [
