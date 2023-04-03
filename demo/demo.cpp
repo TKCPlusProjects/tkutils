@@ -14,7 +14,7 @@ int main()
 
   for (int i = 0; i < 10; i++)
   {
-    array ^= i;
+    array.push_diff(i);
   }
 
   ret = array - array[0];

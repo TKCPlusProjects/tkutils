@@ -87,24 +87,6 @@ namespace tkht
             erase(__v);
         }
 
-        /// @brief push新元素，但移除重复添加的元素
-        /// @param __v 新元素
-        void operator^=(T __v)
-        {
-            if (!repeat(__v))
-            {
-                if (contain(__v))
-                {
-                    erase(__v);
-                    repeat_push(__v);
-                }
-                else
-                {
-                    push(__v);
-                }
-            }
-        }
-
         // operator a
 
         TKArray &operator=(vector<T> __a)
@@ -148,6 +130,37 @@ namespace tkht
         void push(T __v)
         {
             v.push_back(__v);
+        }
+
+        void push_diff(T __v)
+        {
+            if (!repeat(__v))
+            {
+                if (contain(__v))
+                {
+                    erase(__v);
+                    repeat_push(__v);
+                }
+                else
+                {
+                    push(__v);
+                }
+            }
+        }
+
+        void push_unique(T __v)
+        {
+            if (!repeat(__v))
+            {
+                if (contain(__v))
+                {
+                    repeat_push(__v);
+                }
+                else
+                {
+                    push(__v);
+                }
+            }
         }
 
         void erase(T __v)
