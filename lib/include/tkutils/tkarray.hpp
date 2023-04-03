@@ -160,6 +160,12 @@ namespace tkht
             }
         }
 
+        template<typename _Compare>
+        void sort(_Compare __compare)
+        {
+            std::sort(begin(), end(), __compare);
+        }
+
         TKArray copy()
         {
             TKArray that;
