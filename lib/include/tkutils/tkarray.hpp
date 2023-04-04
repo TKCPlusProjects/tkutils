@@ -87,7 +87,7 @@ namespace tkht
             erase(__v);
         }
 
-        // operator a
+        // operator v
 
         TKArray &operator=(vector<T> __a)
         {
@@ -95,21 +95,21 @@ namespace tkht
             return *this;
         }
 
-        TKArray operator+(TKArray __a)
+        TKArray operator+(vector<T> __a)
         {
             TKArray that = copy();
             that += __a;
             return that;
         }
 
-        TKArray operator-(TKArray __a)
+        TKArray operator-(vector<T> __a)
         {
             TKArray that = copy();
             that -= __a;
             return that;
         }
 
-        void operator+=(TKArray __a)
+        void operator+=(vector<T> __a)
         {
             for (T __v : __a)
             {
@@ -117,7 +117,45 @@ namespace tkht
             }
         }
 
-        void operator-=(TKArray __a)
+        void operator-=(vector<T> __a)
+        {
+            for (T __v : __a)
+            {
+                erase(__v);
+            }
+        }
+
+        // operator a
+
+        TKArray &operator=(TKArray<T> __a)
+        {
+            this->v = __a.v;
+            return *this;
+        }
+
+        TKArray operator+(TKArray<T> __a)
+        {
+            TKArray that = copy();
+            that += __a;
+            return that;
+        }
+
+        TKArray operator-(TKArray<T> __a)
+        {
+            TKArray that = copy();
+            that -= __a;
+            return that;
+        }
+
+        void operator+=(TKArray<T> __a)
+        {
+            for (T __v : __a)
+            {
+                push(__v);
+            }
+        }
+
+        void operator-=(TKArray<T> __a)
         {
             for (T __v : __a)
             {
