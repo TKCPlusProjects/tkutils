@@ -229,6 +229,14 @@ namespace tkht
             std::sort(begin(), end(), __compare);
         }
 
+        template<typename _Compare>
+        TKArray sorted(_Compare __compare)
+        {
+            TKArray that = copy();
+            that.sort(__compare);
+            return that;
+        }
+
         TKArray copy()
         {
             TKArray that;
