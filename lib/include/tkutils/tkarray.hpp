@@ -173,6 +173,11 @@ namespace tkht
             }
         }
 
+        void clear()
+        {
+            v.clear();
+        }
+
         template<typename _Compare>
         void sort(_Compare __compare)
         {
