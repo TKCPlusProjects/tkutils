@@ -41,14 +41,15 @@ namespace tkht
 
         // calculate
 
-        unsigned long size()
+        unsigned long size() const
         {
             return v.size();
         }
 
-        bool contain(T __v)
+        bool contain(T __v) const
         {
-            return find(__v) != end();
+            auto that = const_cast<TKArray *>(this);
+            return that->find(__v) != that->end();
         }
 
         T front()
@@ -230,14 +231,14 @@ namespace tkht
         }
 
         template<typename _Compare>
-        TKArray sorted(_Compare __compare)
+        TKArray sorted(_Compare __compare) const
         {
             TKArray that = copy();
             that.sort(__compare);
             return that;
         }
 
-        TKArray copy()
+        TKArray copy() const
         {
             TKArray that;
             that.v = this->v;
@@ -263,7 +264,7 @@ namespace tkht
 
         // repeat
 
-        bool repeat(T __v)
+        bool repeat(T __v) const
         {
             return r.count(__v);
         }
