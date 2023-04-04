@@ -32,6 +32,13 @@ namespace tkht
             v = __v;
         }
 
+        template<typename _Compare>
+        TKArray(initializer_list<T> __v, _Compare __compare)
+        {
+            v = __v;
+            sort(__compare);
+        }
+
         // calculate
 
         unsigned long size()
